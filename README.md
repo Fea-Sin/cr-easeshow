@@ -4,6 +4,7 @@
 react component
 
 ## Example
+<img src="./github/easeshow.gif" width="800px" alt="example" />
 
 ## Usage
 
