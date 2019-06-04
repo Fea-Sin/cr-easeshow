@@ -4,7 +4,7 @@
 react component
 
 ## Example
-<img src="./github/easeshow.gif" width="800px" alt="example" />
+<img src="./github/easeshow2.gif" width="800px" alt="example" />
 
 ## Usage
 
@@ -13,10 +13,14 @@ cnpm install --save cr-easeshow
 ```
 
 ```js
-import MindTree from 'cr-easeshow'
+import EaseShow from 'cr-easeshow'
 import 'cr-easeshow/assets/index.css'
 // 注意在使用的时候不能忘记引入css
-
+<div style={{height: 600, border: '1px solid #21c8be'}}>
+  <EaseShow minScale={0.5} maxScale={2}>
+    <div style={{fontSize: 200, color: '#e850e6'}}>HELLO WORLD</div>
+  </EaseShow>
+</div>
 ```
 
 ## 注意
@@ -28,11 +32,14 @@ import 'cr-easeshow/assets/index.css'
 ## API
 name | type | description
 -----|------|------------
+minScale|number|缩小的最小倍数
+maxScale|number|放大的最大倍数
+bgColor|string|拖动放大缩小画布的背景颜色
 
 ## Development
 
 ```
-npm install
+cnpm install
 npm start
 ```
 
@@ -43,4 +50,4 @@ http://localhost:8021/examples/testOne.html
 
 ## License
 
-cr-mindTree is released under the MIT license.
+cr-easeshow is released under the MIT license.

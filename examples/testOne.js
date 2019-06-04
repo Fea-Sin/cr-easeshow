@@ -7,14 +7,17 @@ import '../assets/index.less'
 const reactContainer = document.getElementById('__react-content');
 const bodyContainer = document.getElementsByTagName('body')
 bodyContainer[0].style.padding = '10px'
+bodyContainer[0].style.overflow = 'hidden'
 
 class App extends PureComponent {
   
   render () {
-
     return (
       <div>
-        <div style={{height: 600, border: '10px solid #21c8be'}}>
+        <div style={{height: 600, border: '1px solid #21c8be'}}>
+          <EaseShow minScale={0.5} maxScale={2}>
+            <div style={{fontSize: 200, color: '#e850e6'}}>HELLO WORLD</div>
+          </EaseShow>
         </div>
       </div>
     )
