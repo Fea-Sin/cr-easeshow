@@ -12,7 +12,7 @@
   "author": "feasin",
   "keywords": ["drag element", "scale element"],
   "config": {
-    "port": 8020
+    "port": 8021
   },
   "files": [
     "es",
@@ -44,7 +44,7 @@
     "type": "git",
     "url": "git+https://github.com/Fea-Sin/cr-easeshow.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Fea-Sin/cr-easeshow/issues"
   },
