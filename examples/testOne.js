@@ -10,12 +10,23 @@ bodyContainer[0].style.padding = '10px'
 bodyContainer[0].style.overflow = 'hidden'
 
 class App extends PureComponent {
+  state = {
+    scale: 0.5
+  }
+  componentDidMount() {
+    // setTimeout(() => {
+    //   console.log('执行延时')
+    //   this.setState({
+    //     scale: 2
+    //   })
+    // }, 1000)
+  }
   
   render () {
     return (
       <div>
         <div style={{height: 600, border: '1px solid #21c8be'}}>
-          <EaseShow minScale={0.5} maxScale={2}>
+          <EaseShow minScale={0.5} maxScale={2} scale={this.state.scale}>
             <div style={{fontSize: 200, color: '#e850e6'}}>HELLO WORLD</div>
           </EaseShow>
         </div>

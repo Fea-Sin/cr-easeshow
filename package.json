@@ -10,7 +10,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "feasin",
-  "keywords": ["drag element", "scale element"],
+  "keywords": [
+    "drag element",
+    "scale element"
+  ],
   "config": {
     "port": 8021
   },
@@ -37,6 +40,7 @@
   "dependencies": {
     "babel-runtime": "6.x",
     "classnames": "2.x",
+    "lodash": "^4.17.11",
     "prop-types": "^15.5.6",
     "rc-util": "^4.1.0"
   },
@@ -48,5 +52,9 @@
   "bugs": {
     "url": "https://github.com/Fea-Sin/cr-easeshow/issues"
   },
-  "homepage": "https://github.com/Fea-Sin/cr-easeshow#readme"
+  "homepage": "https://github.com/Fea-Sin/cr-easeshow#readme",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  }
 }
