@@ -26,7 +26,7 @@ class App extends PureComponent {
     return (
       <div>
         <div style={{height: 600, border: '1px solid #21c8be'}}>
-          <EaseShow minScale={0.5} maxScale={2} scale={this.state.scale}>
+          <EaseShow minScale={0.2} maxScale={2} isMove={true} isScale={true} scale={this.state.scale}>
             <div style={{fontSize: 200, color: '#e850e6'}}>HELLO WORLD</div>
           </EaseShow>
         </div>

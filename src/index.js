@@ -35,7 +35,9 @@ class EaseShow extends PureComponent {
     const showBox = this.showBox
     const outBox = this.outBox
     const container = this.container
-    const { scale } = this.props
+    const { isMove } = this.props
+    const propScale = this.props.scale
+    scale = propScale
     OuiDom.setStyles(showBox, {
       ['width']: showW + 'px',
       ['height']: showH + 'px',
@@ -48,10 +50,13 @@ class EaseShow extends PureComponent {
       ['width']: boxW + 'px',
       ['height']: boxH + 'px',    
     })
-    this.setScale(showBox, scale)
+    this.setScale(showBox, propScale)
 
     this.setMove(outBox, showBox)
-    drag.sdrag()
+    
+    if (isMove) {
+      drag.sdrag()
+    }
   }
   componentDidUpdate(prevProps, prevState) {
     // console.log('component up date', prevState)
@@ -81,6 +86,10 @@ class EaseShow extends PureComponent {
   }
 
   handleWheel = (event) => {
+    const { isScale } = this.props
+    if (!isScale) {
+      return
+    }
     const ele = event.target
     if (event.deltaY > 0) {
       scale += 50 * -0.001;
@@ -118,11 +127,15 @@ EaseShow.propTypes = {
   bgColor: PropTypes.string,
   prefixCls: PropTypes.string,
   scale: PropTypes.number,
+  isMove: PropTypes.bool,
+  isScale: PropTypes.bool,
 }
 EaseShow.defaultProps = {
   minScale: 0.125,
   maxScale: 3,
   bgColor: '#fae0dd',
   prefixCls: 'cr-easeshow',
+  isMove: true,
+  isScale: true,
 }
 export default EaseShow

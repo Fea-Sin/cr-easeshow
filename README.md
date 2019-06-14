@@ -35,6 +35,8 @@ minScale|number|缩小的最小倍数
 maxScale|number|放大的最大倍数
 bgColor|string|拖动放大缩小画布的背景颜色
 scale|number|组件可以按照外部值放大缩小
+isMove|bool|组件是否可以拖动`true`可以拖动
+isScale|bool|组件是否可以缩放`true`可以缩放
 
 ## Development
 
