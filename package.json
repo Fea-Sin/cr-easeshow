@@ -1,6 +1,6 @@
 {
   "name": "cr-easeshow",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a react component for element drag and scale",
   "scripts": {
     "start": "rc-tools run server",

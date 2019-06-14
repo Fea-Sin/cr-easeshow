@@ -11,7 +11,7 @@ bodyContainer[0].style.overflow = 'hidden'
 
 class App extends PureComponent {
   state = {
-    scale: 0.5
+    scale: 10
   }
   componentDidMount() {
     // setTimeout(() => {
@@ -21,13 +21,16 @@ class App extends PureComponent {
     //   })
     // }, 1000)
   }
+  handleClick = () => {
+    console.log('click')
+  }
   
   render () {
     return (
       <div>
         <div style={{height: 600, border: '1px solid #21c8be'}}>
           <EaseShow minScale={0.2} maxScale={2} isMove={true} isScale={true} scale={this.state.scale}>
-            <div style={{fontSize: 200, color: '#e850e6'}}>HELLO WORLD</div>
+            <div onClick={this.handleClick} style={{fontSize: 200, color: '#e850e6'}}>HELLO WORLD</div>
           </EaseShow>
         </div>
       </div>

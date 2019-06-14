@@ -80,6 +80,7 @@ class EaseShow extends PureComponent {
   }
 
   setScale = (ele, scale) => {
+    scale = Math.min(Math.max(this.state.minScale, scale), this.state.maxScale);
     if (ele) {
       ele.style.transform = `scale(${scale})`;
     }
@@ -90,7 +91,8 @@ class EaseShow extends PureComponent {
     if (!isScale) {
       return
     }
-    const ele = event.target
+    // const ele = event.target
+    const ele = this.showBox
     if (event.deltaY > 0) {
       scale += 50 * -0.001;
     } else {
@@ -99,6 +101,7 @@ class EaseShow extends PureComponent {
   
     // Restrict scale
     scale = Math.min(Math.max(this.state.minScale, scale), this.state.maxScale);
+    console.log(scale)
   
     // Apply scale transform
     ele.style.transform = `scale(${scale})`;
