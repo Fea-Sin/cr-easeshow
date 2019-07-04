@@ -101,7 +101,7 @@ class EaseShow extends PureComponent {
   
     // Restrict scale
     scale = Math.min(Math.max(this.state.minScale, scale), this.state.maxScale);
-    console.log(scale)
+    // console.log(scale)
   
     // Apply scale transform
     ele.style.transform = `scale(${scale})`;
